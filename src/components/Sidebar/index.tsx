@@ -5,6 +5,7 @@ import { Logo } from './Logo';
 import { MainNavigation } from './MainNavigation';
 import { NavItem } from './MainNavigation/NavItem';
 import { UsedSpaceWidget } from './UsedSpaceWidget';
+import { Profile } from './Profile';
 
 const Sidebar = () => (
   <aside className="flex flex-col gap-6 border-r border-zinc-200 px-5 py-8">
@@ -27,6 +28,10 @@ const Sidebar = () => (
       </nav>
 
       <UsedSpaceWidget />
+
+      <div className="h-px bg-zinc-200" />
+
+      <Profile />
     </div>
   </aside>
 );

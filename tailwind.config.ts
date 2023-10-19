@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: ['./src/**/*.tsx'],
@@ -6,6 +6,7 @@ const config: Config = {
     extend: {
       gridTemplateColumns: {
         app: 'minmax(18rem, 20rem) 1fr',
+        profile: 'max-content 1fr min-content',
       },
 
       backgroundImage: {
@@ -16,5 +17,5 @@ const config: Config = {
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;
