@@ -3,14 +3,14 @@ import * as RSelect from '@radix-ui/react-select';
 import { ChevronDown } from 'lucide-react';
 import { ReactNode } from 'react';
 
-interface SelectProps {
+interface SelectProps extends RSelect.SelectProps {
   children: ReactNode;
   placeholder: string;
 }
 
-export function Select({ children, placeholder }: SelectProps) {
+export function Select({ children, placeholder, ...props }: SelectProps) {
   return (
-    <RSelect.Root>
+    <RSelect.Root {...props}>
       <RSelect.Trigger className="flex h-11 w-full items-center justify-between rounded-lg border border-zinc-300 px-3 py-2 shadow-sm data-[placeholder]:text-zinc-400">
         <RSelect.Value placeholder={placeholder} className="text-black" />
         <RSelect.Icon>

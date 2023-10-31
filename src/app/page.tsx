@@ -1,6 +1,6 @@
 import { SettingsTabs } from '@/components/SettingsTabs';
 import * as Input from '@/components/Input';
-import { Mail } from 'lucide-react';
+import { Bold, Italic, Link, List, ListOrdered, Mail } from 'lucide-react';
 
 import { Select } from '@/components/Form/Select';
 import * as FileInput from '@/components/Form/FileInput';
@@ -139,6 +139,44 @@ export default function Home() {
                 Write a short introduction.
               </span>
             </label>
+            <div className="space-y-3">
+              <div className="grid grid-cols-2 gap-3">
+                <Select placeholder="" defaultValue="normal">
+                  <SelectItem value="normal" text="Normal Text" />
+                  <SelectItem value="md" text="Markdown" />
+                </Select>
+
+                <div className="flex items-center gap-1">
+                  <button className="rounded-md p-2 hover:bg-zinc-50">
+                    <Bold className="h-4 w-4 textt-zinc-500" strokeWidth={3} />
+                  </button>
+                  <button className="rounded-md p-2 hover:bg-zinc-50">
+                    <Italic
+                      className="h-4 w-4 textt-zinc-500"
+                      strokeWidth={3}
+                    />
+                  </button>
+                  <button className="rounded-md p-2 hover:bg-zinc-50">
+                    <Link className="h-4 w-4 textt-zinc-500" strokeWidth={3} />
+                  </button>
+                  <button className="rounded-md p-2 hover:bg-zinc-50">
+                    <List className="h-4 w-4 textt-zinc-500" strokeWidth={3} />
+                  </button>
+                  <button className="rounded-md p-2 hover:bg-zinc-50">
+                    <ListOrdered
+                      className="h-4 w-4 textt-zinc-500"
+                      strokeWidth={3}
+                    />
+                  </button>
+                </div>
+              </div>
+
+              <textarea
+                id="bio"
+                className="min-h-[120px] resize-y w-full rounded-lg border border-zinc-300 px-3 py-2 shadow-sm"
+                defaultValue="I'm a Product Designer based in Malbourne, Australia, I specialise in UX/UI design, brand strategy..."
+              />
+            </div>
           </div>
 
           <div className="grid gap-3 grid-cols-form pt-5">
