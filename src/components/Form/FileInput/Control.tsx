@@ -2,9 +2,9 @@
 import { ChangeEvent, ComponentProps } from 'react';
 import { useFileInput } from './Root';
 
-export type RootProps = ComponentProps<'input'>;
+export type ControlProps = ComponentProps<'input'>;
 
-export function Control(props: RootProps) {
+export function Control({ multiple = false, ...props }: ControlProps) {
   const { id, onFileSelected } = useFileInput();
 
   function handleFilesSelected(event: ChangeEvent<HTMLInputElement>) {
@@ -12,7 +12,7 @@ export function Control(props: RootProps) {
 
     const files = Array.from(event.target.files);
 
-    onFileSelected(files);
+    onFileSelected(files, multiple);
   }
 
   return (
@@ -20,8 +20,9 @@ export function Control(props: RootProps) {
       type="file"
       id={id}
       className="sr-only"
-      {...props}
       onChange={handleFilesSelected}
+      multiple={multiple}
+      {...props}
     />
   );
 }
