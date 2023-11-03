@@ -22,7 +22,7 @@ export function Select({ children, placeholder, ...props }: SelectProps) {
         <RSelect.Content
           side="bottom"
           position="popper"
-          className="z-10 border border-zinc-200 bg-white w-[--radix-select-trigger-width]"
+          className="z-10 border border-zinc-200 bg-white w-[--radix-select-trigger-width] animate-slideDownAndFade"
           sideOffset={8}
         >
           <RSelect.Viewport className="outline-none">
