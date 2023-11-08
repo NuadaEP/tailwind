@@ -15,13 +15,14 @@ export default function Home() {
       <SettingsTabs />
 
       <div className="mt-6 flex flex-col">
-        <div className="flex items-center justify-between pb-4 border-b border-zinc-200">
+        <div className="flex flex-col gap-4 lg:items-center justify-between pb-4 border-b border-zinc-200 lg:flex-row">
           <div className="space-y-1">
             <h2 className="text-lg font-medium text-zinc-900">Personal Info</h2>
             <span className="text-sm text-zinc-500">
               Uptade your photo and personal details here.
             </span>
           </div>
+
           <div className="flex items-center gap-2">
             <Button
               variant="outline"
@@ -44,14 +45,14 @@ export default function Home() {
           id="setttings"
           className="mt-6 flex w-full flex-col gap-5 divide-y devide-zinc-200"
         >
-          <div className="grid gap-3 grid-cols-form">
+          <div className="flex flex-col lg:grid gap-3 lg:grid-cols-form">
             <label
               htmlFor="firstName"
               className="text-sm font-medium text-zinc-700"
             >
               Name
             </label>
-            <div className="grid gap-6 grid-cols-2">
+            <div className="flex flex-col lg:grid gap-3 lg:grid-cols-form">
               <Input.Root>
                 <Input.Control defaultValue="Bruno" id="firstName" />
               </Input.Root>
