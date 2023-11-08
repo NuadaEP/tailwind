@@ -15,7 +15,7 @@ export const TabItem = ({ title, value, isSelected = false }: TabItemProps) => {
       value={value}
       className="relative px-1 pb-4 text-sm font-mediu text-zinc-500 hover:text-violet-700 data-[state=active]:text-violet-700 outline-none group"
     >
-      <span className="group-focus-visible:ring-2 group-focus-visible:ring-violet-400 group-focus-visible:ring-offset-4 rounded">
+      <span className="whitespace-nowrap group-focus-visible:ring-2 group-focus-visible:ring-violet-400 group-focus-visible:ring-offset-4 rounded">
         {title}
       </span>
 
